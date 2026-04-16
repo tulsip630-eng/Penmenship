@@ -45,6 +45,39 @@ body {
   box-shadow: 0 6px 24px rgba(65, 78, 149, 0.08);
 }
 
+
+.avatar-box {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: linear-gradient(135deg, #f7f9ff, #eef2ff);
+  border: 1px solid #d9e1ff;
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffd9e8, #dfe6ff);
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.avatar-message h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+.avatar-message p {
+  margin: 0;
+  color: var(--muted);
+}
+
+
 .section-title {
   margin: 0 0 0.75rem;
   font-size: 1.1rem;
