@@ -1,0 +1,150 @@
+:root {
+  --bg: #f5f7ff;
+  --panel: #ffffff;
+  --ink: #2b3050;
+  --muted: #6570a6;
+  --accent: #5c7aff;
+  --accent-soft: #e7ecff;
+  --success: #22b573;
+  --trace: #9aa8e8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at top, #eef2ff 0%, var(--bg) 55%);
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero p {
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+
+.panel {
+  background: var(--panel);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 6px 24px rgba(65, 78, 149, 0.08);
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.9rem;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.control-group.actions {
+  justify-content: flex-end;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  border-radius: 10px;
+  border: 1px solid #c6cff6;
+  padding: 0.55rem 0.7rem;
+}
+
+button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s ease, opacity 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.92;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button.secondary {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+.workspace canvas {
+  width: 100%;
+  border: 1px dashed #b6bfe8;
+  border-radius: 10px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #fbfcff,
+    #fbfcff 46px,
+    #dce3ff 46px,
+    #dce3ff 48px
+  );
+  touch-action: none;
+}
+
+.hint {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.motivation-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-bar {
+  margin-top: 0.6rem;
+  height: 16px;
+  background: #e8edff;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+#progressFill {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #63d7a2, var(--success));
+  transition: width 0.25s ease;
+}
+
+.goal-actions {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+blockquote {
+  margin: 0.6rem 0 0.8rem;
+  font-size: 1.1rem;
+  color: #34417f;
+}
