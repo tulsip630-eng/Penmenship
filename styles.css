@@ -176,6 +176,34 @@ button.secondary {
   flex-wrap: wrap;
 }
 
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #eefdf6;
+  color: #158a58;
+  border: 1px solid #b9efd2;
+  border-radius: 999px;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.streak {
+  background: #fff7ea;
+  color: #c58613;
+  border: 1px solid #ffe0a3;
+}
+
+
 blockquote {
   margin: 0.6rem 0 0.8rem;
   font-size: 1.1rem;

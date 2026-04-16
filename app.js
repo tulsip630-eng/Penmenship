@@ -12,9 +12,12 @@ const resetGoalsBtn = document.getElementById('resetGoals');
 const progressFill = document.getElementById('progressFill');
 const progressLabel = document.getElementById('progressLabel');
 const progressBar = document.querySelector('.progress-bar');
+const goalBadge = document.getElementById('goalBadge');
+const streakBadge = document.getElementById('streakBadge');
 
 const goalTarget = 5;
 let completedGoals = 0;
+let sessionStreak = 0;
 
 const quotes = [
   '"Messy pages are proof you are learning."',
@@ -124,6 +127,8 @@ function updateProgress() {
   progressFill.style.width = `${pct}%`;
   progressBar.setAttribute('aria-valuenow', String(Math.round(pct)));
   progressLabel.textContent = `${completedGoals} / ${goalTarget} goals`;
+  goalBadge.textContent = `🎯 ${completedGoals} goals done`;
+  streakBadge.textContent = `🔥 Session streak: ${sessionStreak}`;
 }
 
 modeSelect.addEventListener('change', drawGuideText);
@@ -140,10 +145,12 @@ clearCanvasBtn.addEventListener('click', clearTracing);
 newQuoteBtn.addEventListener('click', randomQuote);
 markGoalBtn.addEventListener('click', () => {
   completedGoals = Math.min(completedGoals + 1, goalTarget);
+  sessionStreak += 1;
   updateProgress();
 });
 resetGoalsBtn.addEventListener('click', () => {
   completedGoals = 0;
+  sessionStreak = 0;
   updateProgress();
 });
 
