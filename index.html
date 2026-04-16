@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penmenship Practice</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <h1>Penmenship Practice Studio</h1>
+        <p>Practice print and cursive handwriting with guided tracing and a motivational boost.</p>
+      </header>
+
+      <section class="panel coach-note" aria-label="Coach encouragement">
+        <div class="avatar-box">
+          <div class="avatar" aria-hidden="true">✍️</div>
+          <div class="avatar-message">
+            <h3>Coach Pen says:</h3>
+            <p>Slow, smooth strokes beat speed. Keep your wrist relaxed and letters will look cleaner.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel controls" aria-label="Practice controls">
+        <h2 class="section-title">Practice Setup</h2>
+        <p class="subtext">Choose your mode, set your text, and start tracing smoothly.</p>
+
+        <div class="card-grid" aria-hidden="true">
+          <article class="mini-card">
+            <h4>Print Mode</h4>
+            <p>Ideal for clean block-letter spacing and consistency.</p>
+          </article>
+          <article class="mini-card">
+            <h4>Cursive Mode</h4>
+            <p>Practice flowing joins, loops, and connected writing rhythm.</p>
+          </article>
+          <article class="mini-card">
+            <h4>Sentence Drills</h4>
+            <p>Build endurance and line control one phrase at a time.</p>
+          </article>
+        </div>
+
+        <div class="control-grid">
+          <div class="control-group">
+            <label for="mode">Practice mode</label>
+            <select id="mode">
+              <option value="print">Print</option>
+              <option value="cursive">Cursive</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="practiceText">Trace text</label>
+            <input id="practiceText" type="text" maxlength="60" value="Practice makes progress" />
+          </div>
+
+          <div class="control-group actions">
+            <button id="loadLetters">Load alphabet drill</button>
+            <button id="loadSentence">Load sentence drill</button>
+            <button id="clearCanvas" class="secondary">Clear tracing</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel workspace">
+        <h2 class="section-title">Tracing Workspace</h2>
+        <p class="subtext">Use mouse, touch, or stylus to trace over the guide text.</p>
+        <canvas id="traceCanvas" width="960" height="360" aria-label="Tracing area"></canvas>
+      </section>
+
+      <section class="panel motivation">
+        <div class="motivation-top">
+          <h2 class="section-title">Motivation Meter</h2>
+          <span id="progressLabel">0 / 5 goals</span>
+        </div>
+        <p class="subtext">Complete five mini goals each session to build consistency.</p>
+        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div id="progressFill"></div>
+        </div>
+        <div class="goal-actions">
+          <button id="markGoal">Mark practice goal complete</button>
+          <button id="resetGoals" class="secondary">Reset goals</button>
+        </div>
+        <div class="badge-row" aria-label="Practice badges">
+          <span id="goalBadge" class="badge">🎯 0 goals done</span>
+          <span id="streakBadge" class="badge streak">🔥 Session streak: 0</span>
+        </div>
+      </section>
+
+      <section class="panel quotes">
+        <h2 class="section-title">Fun quote of the session</h2>
+        <blockquote id="quoteText">"Your handwriting is your brain's dance on paper."</blockquote>
+        <button id="newQuote" class="secondary">New quote</button>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

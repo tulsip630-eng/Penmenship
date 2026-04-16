@@ -1,0 +1,244 @@
+:root {
+  --bg: #f5f7ff;
+  --panel: #ffffff;
+  --ink: #2b3050;
+  --muted: #6570a6;
+  --accent: #5c7aff;
+  --accent-soft: #e7ecff;
+  --success: #22b573;
+  --trace: #9aa8e8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at top, #eef2ff 0%, var(--bg) 55%);
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero p {
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+
+.panel {
+  background: var(--panel);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 6px 24px rgba(65, 78, 149, 0.08);
+}
+
+
+.avatar-box {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: linear-gradient(135deg, #f7f9ff, #eef2ff);
+  border: 1px solid #d9e1ff;
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffd9e8, #dfe6ff);
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.avatar-message h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+.avatar-message p {
+  margin: 0;
+  color: var(--muted);
+}
+
+
+.section-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.subtext {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: -0.2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.8rem;
+  margin: 0.9rem 0;
+}
+
+.mini-card {
+  background: #f9faff;
+  border: 1px solid #e1e7ff;
+  border-radius: 12px;
+  padding: 0.85rem;
+}
+
+.mini-card h4 {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+}
+
+.mini-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.control-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.9rem;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.control-group.actions {
+  justify-content: flex-end;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  border-radius: 10px;
+  border: 1px solid #c6cff6;
+  padding: 0.55rem 0.7rem;
+}
+
+button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s ease, opacity 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.92;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button.secondary {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+.workspace canvas {
+  width: 100%;
+  border: 1px dashed #b6bfe8;
+  border-radius: 10px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #fbfcff,
+    #fbfcff 46px,
+    #dce3ff 46px,
+    #dce3ff 48px
+  );
+  touch-action: none;
+  margin-top: 0.4rem;
+}
+
+.motivation-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-bar {
+  margin-top: 0.6rem;
+  height: 16px;
+  background: #e8edff;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+#progressFill {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #63d7a2, var(--success));
+  transition: width 0.25s ease;
+}
+
+.goal-actions {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #eefdf6;
+  color: #158a58;
+  border: 1px solid #b9efd2;
+  border-radius: 999px;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.streak {
+  background: #fff7ea;
+  color: #c58613;
+  border: 1px solid #ffe0a3;
+}
+
+
+blockquote {
+  margin: 0.6rem 0 0.8rem;
+  font-size: 1.1rem;
+  color: #34417f;
+}
