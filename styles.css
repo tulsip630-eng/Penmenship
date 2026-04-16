@@ -45,7 +45,45 @@ body {
   box-shadow: 0 6px 24px rgba(65, 78, 149, 0.08);
 }
 
-.controls {
+.section-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.subtext {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: -0.2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.8rem;
+  margin: 0.9rem 0;
+}
+
+.mini-card {
+  background: #f9faff;
+  border: 1px solid #e1e7ff;
+  border-radius: 12px;
+  padding: 0.85rem;
+}
+
+.mini-card h4 {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+}
+
+.mini-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.control-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 0.9rem;
@@ -107,12 +145,7 @@ button.secondary {
     #dce3ff 48px
   );
   touch-action: none;
-}
-
-.hint {
-  margin-bottom: 0;
-  color: var(--muted);
-  font-size: 0.95rem;
+  margin-top: 0.4rem;
 }
 
 .motivation-top {
